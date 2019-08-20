@@ -1,0 +1,25 @@
+----------------- GettingStarted -------------------
+- LCD library modified to fit the devbugger board. (Pin assignments are different on PICDem2)
+
+--------------------- Lab1 -------------------------
+- LCD library modified to fit the devbugger board. (Pin assignments are different on PICDem2)
+
+--------------------- Lab2 -------------------------
+- Minimal Changes
+
+--------------------- Lab3 -------------------------
+- Minimal Changes
+
+--------------------- Lab4 -------------------------
+- Minimal Changes
+
+--------------------- Lab5 -------------------------
+- Moved flashing LED to RB0
+- Removed access to T1GCON which is not present for PIC18
+
+--------------------- Lab6 -------------------------
+- Changed delta in the assembly to 1 (required for PIC18 devices), delta of 2 is used for PIC16 (mid range)
+- LCD library modified to fit the devbugger board. (Pin assignments are different on PICDem2)
+
+
+* Minimal changes means that the project is not altered in content. Some work was done to make it compile for PIF18F4620 but not more past that.

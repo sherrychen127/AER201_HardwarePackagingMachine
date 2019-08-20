@@ -1,0 +1,7 @@
+_Interrupt_initializer: CODE, 67 0 7
+_main: CODE, 33 0 17
+__initialization: CODE, 29 0 0
+_InitSystem: CODE, 59 0 8
+_TIMER1_initializer: CODE, 50 0 9
+_INTERRUPT_Interrupthandler: CODE, 4 0 23
+Total: 64

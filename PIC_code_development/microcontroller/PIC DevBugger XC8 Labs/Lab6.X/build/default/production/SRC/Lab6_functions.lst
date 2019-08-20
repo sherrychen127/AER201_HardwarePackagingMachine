@@ -1,0 +1,44 @@
+
+
+Microchip Technology PIC18 Macro Assembler V1.40 build -251452761 
+                                                                                                           Sat Dec 31 01:13:55 2016
+
+
+     1                           	processor	18F4620
+     2                           	opt	pw 132
+     3                           	psect	text0,local,class=CODE,delta=1
+     4  0000                     stk_offset	set	0
+     5  0000                     auto_size	set	0
+     6                           
+     7                           ; stack_auto defines a symbol /name/_offset which equates to the
+     8                           ; stack offset of the auto object in question
+     9  0000                     
+    10                           ; stack_param defines a symbol /name/_offset which equates to the
+    11                           ; stack offset of the parameter object in question
+    12  0000                     
+    13                           ; alloc_stack adjusts the SP to allocate space for auto objects
+    14                           ; it also links in to the btemp symbol so that can be used
+    15  0000                     
+    16                           ; restore_stack adjusts the SP to remove all auto and parameter
+    17                           ; objects from the stack prior to returning from a function
+    18  0000                     
+    19                           	psect	text0
+    20  00FEF2                     _incFunction:
+    21                           	opt stack 0
+    22                           
+    23                           ; Add two char numbers and return the result
+    24  00FEF2  28E8               	incf	wreg,w,c
+    25  00FEF4  0012               	return	
+    26  00FEF6                     _decFunction:
+    27                           	opt stack 0
+    28                           
+    29                           ; Subtract two char numbers and return the result
+    30  00FEF6  04E8               	decf	wreg,w,c
+    31  00FEF8  0012               	return	
+    32                           wreg	equ	0xFE8
+
+
+Microchip Technology PIC18 Macro Assembler V1.40 build -251452761 
+Symbol Table                                                                                               Sat Dec 31 01:13:55 2016
+
+                        WREG 000FE8                  _decFunction FEF6                  _incFunction FEF2  

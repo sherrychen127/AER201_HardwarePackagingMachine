@@ -1,0 +1,1019 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.32 build 58300 
+                                                                                               Wed Jul 23 16:33:20 2014
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 58300
+     1                           	processor	16F1937
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	intentry,global,class=CODE,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	maintext,global,class=CODE,merge=1,split=1,delta=2
+     8                           	psect	text1,local,class=CODE,merge=1,delta=2
+     9                           	psect	text2,local,class=CODE,merge=1,delta=2
+    10                           	psect	text3,local,class=CODE,merge=1,delta=2
+    11                           	dabs	1,0x7E,2
+    12  0000                     	;# 
+    13  0001                     	;# 
+    14  0002                     	;# 
+    15  0003                     	;# 
+    16  0004                     	;# 
+    17  0005                     	;# 
+    18  0006                     	;# 
+    19  0007                     	;# 
+    20  0008                     	;# 
+    21  0009                     	;# 
+    22  000A                     	;# 
+    23  000B                     	;# 
+    24  000C                     	;# 
+    25  000D                     	;# 
+    26  000E                     	;# 
+    27  000F                     	;# 
+    28  0010                     	;# 
+    29  0011                     	;# 
+    30  0012                     	;# 
+    31  0013                     	;# 
+    32  0015                     	;# 
+    33  0016                     	;# 
+    34  0016                     	;# 
+    35  0017                     	;# 
+    36  0018                     	;# 
+    37  0019                     	;# 
+    38  001A                     	;# 
+    39  001B                     	;# 
+    40  001C                     	;# 
+    41  001E                     	;# 
+    42  001F                     	;# 
+    43  008C                     	;# 
+    44  008D                     	;# 
+    45  008E                     	;# 
+    46  008F                     	;# 
+    47  0090                     	;# 
+    48  0091                     	;# 
+    49  0092                     	;# 
+    50  0093                     	;# 
+    51  0095                     	;# 
+    52  0096                     	;# 
+    53  0097                     	;# 
+    54  0098                     	;# 
+    55  0099                     	;# 
+    56  009A                     	;# 
+    57  009B                     	;# 
+    58  009B                     	;# 
+    59  009C                     	;# 
+    60  009D                     	;# 
+    61  009E                     	;# 
+    62  010C                     	;# 
+    63  010D                     	;# 
+    64  010E                     	;# 
+    65  010F                     	;# 
+    66  0110                     	;# 
+    67  0111                     	;# 
+    68  0112                     	;# 
+    69  0113                     	;# 
+    70  0114                     	;# 
+    71  0115                     	;# 
+    72  0116                     	;# 
+    73  0117                     	;# 
+    74  0118                     	;# 
+    75  0119                     	;# 
+    76  011A                     	;# 
+    77  011B                     	;# 
+    78  011D                     	;# 
+    79  018C                     	;# 
+    80  018D                     	;# 
+    81  018F                     	;# 
+    82  0190                     	;# 
+    83  0191                     	;# 
+    84  0191                     	;# 
+    85  0192                     	;# 
+    86  0193                     	;# 
+    87  0193                     	;# 
+    88  0193                     	;# 
+    89  0194                     	;# 
+    90  0195                     	;# 
+    91  0196                     	;# 
+    92  0199                     	;# 
+    93  019A                     	;# 
+    94  019B                     	;# 
+    95  019B                     	;# 
+    96  019B                     	;# 
+    97  019B                     	;# 
+    98  019C                     	;# 
+    99  019C                     	;# 
+   100  019D                     	;# 
+   101  019E                     	;# 
+   102  019F                     	;# 
+   103  020D                     	;# 
+   104  0210                     	;# 
+   105  0211                     	;# 
+   106  0212                     	;# 
+   107  0213                     	;# 
+   108  0214                     	;# 
+   109  0215                     	;# 
+   110  0215                     	;# 
+   111  0216                     	;# 
+   112  0217                     	;# 
+   113  0291                     	;# 
+   114  0291                     	;# 
+   115  0292                     	;# 
+   116  0293                     	;# 
+   117  0294                     	;# 
+   118  0295                     	;# 
+   119  0295                     	;# 
+   120  0296                     	;# 
+   121  0298                     	;# 
+   122  0298                     	;# 
+   123  0299                     	;# 
+   124  029A                     	;# 
+   125  029B                     	;# 
+   126  029C                     	;# 
+   127  029C                     	;# 
+   128  029D                     	;# 
+   129  029E                     	;# 
+   130  029F                     	;# 
+   131  0311                     	;# 
+   132  0311                     	;# 
+   133  0312                     	;# 
+   134  0313                     	;# 
+   135  0314                     	;# 
+   136  0315                     	;# 
+   137  0315                     	;# 
+   138  0316                     	;# 
+   139  0318                     	;# 
+   140  0318                     	;# 
+   141  0319                     	;# 
+   142  031A                     	;# 
+   143  031C                     	;# 
+   144  031C                     	;# 
+   145  031D                     	;# 
+   146  031E                     	;# 
+   147  0394                     	;# 
+   148  0395                     	;# 
+   149  0396                     	;# 
+   150  0415                     	;# 
+   151  0416                     	;# 
+   152  0417                     	;# 
+   153  041C                     	;# 
+   154  041D                     	;# 
+   155  041E                     	;# 
+   156  0791                     	;# 
+   157  0792                     	;# 
+   158  0793                     	;# 
+   159  0794                     	;# 
+   160  0795                     	;# 
+   161  0798                     	;# 
+   162  0799                     	;# 
+   163  079A                     	;# 
+   164  07A0                     	;# 
+   165  07A1                     	;# 
+   166  07A2                     	;# 
+   167  07A3                     	;# 
+   168  07A4                     	;# 
+   169  07A5                     	;# 
+   170  07A6                     	;# 
+   171  07A7                     	;# 
+   172  07A8                     	;# 
+   173  07A9                     	;# 
+   174  07AA                     	;# 
+   175  07AB                     	;# 
+   176  0FE4                     	;# 
+   177  0FE5                     	;# 
+   178  0FE6                     	;# 
+   179  0FE7                     	;# 
+   180  0FE8                     	;# 
+   181  0FE9                     	;# 
+   182  0FEA                     	;# 
+   183  0FEB                     	;# 
+   184  0FED                     	;# 
+   185  0FEE                     	;# 
+   186  0FEF                     	;# 
+   187  0000                     	;# 
+   188  0001                     	;# 
+   189  0002                     	;# 
+   190  0003                     	;# 
+   191  0004                     	;# 
+   192  0005                     	;# 
+   193  0006                     	;# 
+   194  0007                     	;# 
+   195  0008                     	;# 
+   196  0009                     	;# 
+   197  000A                     	;# 
+   198  000B                     	;# 
+   199  000C                     	;# 
+   200  000D                     	;# 
+   201  000E                     	;# 
+   202  000F                     	;# 
+   203  0010                     	;# 
+   204  0011                     	;# 
+   205  0012                     	;# 
+   206  0013                     	;# 
+   207  0015                     	;# 
+   208  0016                     	;# 
+   209  0016                     	;# 
+   210  0017                     	;# 
+   211  0018                     	;# 
+   212  0019                     	;# 
+   213  001A                     	;# 
+   214  001B                     	;# 
+   215  001C                     	;# 
+   216  001E                     	;# 
+   217  001F                     	;# 
+   218  008C                     	;# 
+   219  008D                     	;# 
+   220  008E                     	;# 
+   221  008F                     	;# 
+   222  0090                     	;# 
+   223  0091                     	;# 
+   224  0092                     	;# 
+   225  0093                     	;# 
+   226  0095                     	;# 
+   227  0096                     	;# 
+   228  0097                     	;# 
+   229  0098                     	;# 
+   230  0099                     	;# 
+   231  009A                     	;# 
+   232  009B                     	;# 
+   233  009B                     	;# 
+   234  009C                     	;# 
+   235  009D                     	;# 
+   236  009E                     	;# 
+   237  010C                     	;# 
+   238  010D                     	;# 
+   239  010E                     	;# 
+   240  010F                     	;# 
+   241  0110                     	;# 
+   242  0111                     	;# 
+   243  0112                     	;# 
+   244  0113                     	;# 
+   245  0114                     	;# 
+   246  0115                     	;# 
+   247  0116                     	;# 
+   248  0117                     	;# 
+   249  0118                     	;# 
+   250  0119                     	;# 
+   251  011A                     	;# 
+   252  011B                     	;# 
+   253  011D                     	;# 
+   254  018C                     	;# 
+   255  018D                     	;# 
+   256  018F                     	;# 
+   257  0190                     	;# 
+   258  0191                     	;# 
+   259  0191                     	;# 
+   260  0192                     	;# 
+   261  0193                     	;# 
+   262  0193                     	;# 
+   263  0193                     	;# 
+   264  0194                     	;# 
+   265  0195                     	;# 
+   266  0196                     	;# 
+   267  0199                     	;# 
+   268  019A                     	;# 
+   269  019B                     	;# 
+   270  019B                     	;# 
+   271  019B                     	;# 
+   272  019B                     	;# 
+   273  019C                     	;# 
+   274  019C                     	;# 
+   275  019D                     	;# 
+   276  019E                     	;# 
+   277  019F                     	;# 
+   278  020D                     	;# 
+   279  0210                     	;# 
+   280  0211                     	;# 
+   281  0212                     	;# 
+   282  0213                     	;# 
+   283  0214                     	;# 
+   284  0215                     	;# 
+   285  0215                     	;# 
+   286  0216                     	;# 
+   287  0217                     	;# 
+   288  0291                     	;# 
+   289  0291                     	;# 
+   290  0292                     	;# 
+   291  0293                     	;# 
+   292  0294                     	;# 
+   293  0295                     	;# 
+   294  0295                     	;# 
+   295  0296                     	;# 
+   296  0298                     	;# 
+   297  0298                     	;# 
+   298  0299                     	;# 
+   299  029A                     	;# 
+   300  029B                     	;# 
+   301  029C                     	;# 
+   302  029C                     	;# 
+   303  029D                     	;# 
+   304  029E                     	;# 
+   305  029F                     	;# 
+   306  0311                     	;# 
+   307  0311                     	;# 
+   308  0312                     	;# 
+   309  0313                     	;# 
+   310  0314                     	;# 
+   311  0315                     	;# 
+   312  0315                     	;# 
+   313  0316                     	;# 
+   314  0318                     	;# 
+   315  0318                     	;# 
+   316  0319                     	;# 
+   317  031A                     	;# 
+   318  031C                     	;# 
+   319  031C                     	;# 
+   320  031D                     	;# 
+   321  031E                     	;# 
+   322  0394                     	;# 
+   323  0395                     	;# 
+   324  0396                     	;# 
+   325  0415                     	;# 
+   326  0416                     	;# 
+   327  0417                     	;# 
+   328  041C                     	;# 
+   329  041D                     	;# 
+   330  041E                     	;# 
+   331  0791                     	;# 
+   332  0792                     	;# 
+   333  0793                     	;# 
+   334  0794                     	;# 
+   335  0795                     	;# 
+   336  0798                     	;# 
+   337  0799                     	;# 
+   338  079A                     	;# 
+   339  07A0                     	;# 
+   340  07A1                     	;# 
+   341  07A2                     	;# 
+   342  07A3                     	;# 
+   343  07A4                     	;# 
+   344  07A5                     	;# 
+   345  07A6                     	;# 
+   346  07A7                     	;# 
+   347  07A8                     	;# 
+   348  07A9                     	;# 
+   349  07AA                     	;# 
+   350  07AB                     	;# 
+   351  0FE4                     	;# 
+   352  0FE5                     	;# 
+   353  0FE6                     	;# 
+   354  0FE7                     	;# 
+   355  0FE8                     	;# 
+   356  0FE9                     	;# 
+   357  0FEA                     	;# 
+   358  0FEB                     	;# 
+   359  0FED                     	;# 
+   360  0FEE                     	;# 
+   361  0FEF                     	;# 
+   362  000B                     _INTCONbits	set	11
+   363  0011                     _PIR1bits	set	17
+   364  000D                     _PORTB	set	13
+   365  0018                     _T1CONbits	set	24
+   366  0017                     _TMR1H	set	23
+   367  0016                     _TMR1L	set	22
+   368  00C4                     _T1CKPS0	set	196
+   369  00C5                     _T1CKPS1	set	197
+   370  0099                     _OSCCONbits	set	153
+   371  0091                     _PIE1bits	set	145
+   372  008D                     _TRISB	set	141
+   373  010D                     _LATBbits	set	269
+   374  018F                     _ANSELD	set	399
+   375                           
+   376                           	psect	intentry
+   377  0004                     __pintentry:	
+   378                           
+   379                           ; #config settings
+   380  0000                     
+   381 ;; *************** function _INTERRUPT_Interrupthandler *****************
+   382 ;; Defined at:
+   383 ;;		line 29 in file "SRC/Lab4-Solution.c"
+   384 ;; Parameters:    Size  Location     Type
+   385 ;;		None
+   386 ;; Auto vars:     Size  Location     Type
+   387 ;;		None
+   388 ;; Return value:  Size  Location     Type
+   389 ;;		None               void
+   390 ;; Registers used:
+   391 ;;		wreg
+   392 ;; Tracked objects:
+   393 ;;		On entry : 0/0
+   394 ;;		On exit  : 0/0
+   395 ;;		Unchanged: 0/0
+   396 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   397 ;;      Params:         0       0       0       0       0       0       0       0
+   398 ;;      Locals:         0       0       0       0       0       0       0       0
+   399 ;;      Temps:          1       0       0       0       0       0       0       0
+   400 ;;      Totals:         1       0       0       0       0       0       0       0
+   401 ;;Total ram usage:        1 bytes
+   402 ;; Hardware stack levels used:    1
+   403 ;; This function calls:
+   404 ;;		Nothing
+   405 ;; This function is called by:
+   406 ;;		Interrupt level 1
+   407 ;; This function uses a non-reentrant model
+   408 ;;
+   409  0004                     _INTERRUPT_Interrupthandler:	
+   410                           
+   411                           ;incstack = 0
+   412                           ; Regs used in _INTERRUPT_Interrupthandler: [wreg]
+   413  0004  147E               	bsf	126,0	;set compiler interrupt flag
+   414  0005  3180               	pagesel	$
+   415  0006  0020               	movlb	0	; select bank0
+   416  0007  087F               	movf	127,w
+   417  0008  00F0               	movwf	??_INTERRUPT_Interrupthandler
+   418                           
+   419                           ;Lab4-Solution.c: 31: PIR1bits.TMR1IF = 0;
+   420  0009  1011               	bcf	17,0	;volatile
+   421                           
+   422                           ;Lab4-Solution.c: 32: TMR1H = 0X3C;
+   423  000A  303C               	movlw	60
+   424  000B  0097               	movwf	23	;volatile
+   425                           
+   426                           ;Lab4-Solution.c: 34: TMR1L = 0XB0;
+   427  000C  30B0               	movlw	176
+   428  000D  0096               	movwf	22	;volatile
+   429                           
+   430                           ;Lab4-Solution.c: 35: LATBbits.LATB0 = LATBbits.LATB0 ^ 1;
+   431  000E  0022               	movlb	2	; select bank2
+   432  000F  180D               	btfsc	13,0	;volatile
+   433  0010  2814               	goto	u1_20
+   434  0011  0022               	movlb	2	; select bank2
+   435  0012  140D               	bsf	13,0	;volatile
+   436  0013  2816               	goto	i1l35
+   437  0014                     u1_20:	
+   438  0014  0022               	movlb	2	; select bank2
+   439  0015  100D               	bcf	13,0	;volatile
+   440  0016                     i1l35:	
+   441  0016  0870               	movf	??_INTERRUPT_Interrupthandler,w
+   442  0017  0020               	movlb	0	; select bank0
+   443  0018  00FF               	movwf	127
+   444  0019  107E               	bcf	126,0	;clear compiler interrupt flag
+   445  001A  0009               	retfie
+   446  001B                     __end_of_INTERRUPT_Interrupthandler:	
+   447  007E                     btemp	set	126	;btemp
+   448  007E                     pic14e$flags	set	126
+   449  007E                     wtemp	set	126
+   450  007E                     wtemp0	set	126
+   451  0080                     wtemp1	set	128
+   452  0082                     wtemp2	set	130
+   453  0084                     wtemp3	set	132
+   454  0086                     wtemp4	set	134
+   455  0088                     wtemp5	set	136
+   456  007F                     wtemp6	set	127
+   457  007E                     ttemp	set	126
+   458  007E                     ttemp0	set	126
+   459  0081                     ttemp1	set	129
+   460  0084                     ttemp2	set	132
+   461  0087                     ttemp3	set	135
+   462  007F                     ttemp4	set	127
+   463  007E                     ltemp	set	126
+   464  007E                     ltemp0	set	126
+   465  0082                     ltemp1	set	130
+   466  0086                     ltemp2	set	134
+   467  0080                     ltemp3	set	128
+   468                           
+   469                           	psect	cinit
+   470  001D                     start_initialization:	
+   471  001D                     __initialization:	
+   472  001D                     end_of_initialization:	
+   473                           ;End of C runtime variable initialization code
+   474                           
+   475  001D                     __end_of__initialization:	
+   476  001D  107E               	bcf	pic14e$flags,0	;clear compiler interrupt flag
+   477  001E  0020               	movlb	0
+   478  001F  3180  2821         	ljmp	_main	;jump to C main() function
+   479                           
+   480                           	psect	cstackCOMMON
+   481  0070                     __pcstackCOMMON:	
+   482  0070                     ?_InitSystem:	
+   483  0070                     ?_TIMER1_initializer:	
+   484                           ; 0 bytes @ 0x0
+   485                           
+   486  0070                     ?_Interrupt_initializer:	
+   487                           ; 0 bytes @ 0x0
+   488                           
+   489  0070                     ?_INTERRUPT_Interrupthandler:	
+   490                           ; 0 bytes @ 0x0
+   491                           
+   492  0070                     ??_INTERRUPT_Interrupthandler:	
+   493                           ; 0 bytes @ 0x0
+   494                           
+   495  0070                     ?_main:	
+   496                           ; 0 bytes @ 0x0
+   497                           
+   498                           
+   499                           ; 0 bytes @ 0x0
+   500  0070                     	ds	1
+   501  0071                     ??_InitSystem:	
+   502  0071                     ??_TIMER1_initializer:	
+   503                           ; 0 bytes @ 0x1
+   504                           
+   505  0071                     ??_Interrupt_initializer:	
+   506                           ; 0 bytes @ 0x1
+   507                           
+   508  0071                     ??_main:	
+   509                           ; 0 bytes @ 0x1
+   510                           
+   511                           
+   512                           	psect	maintext
+   513  0021                     __pmaintext:	
+   514                           ; 0 bytes @ 0x1
+   515 ;;
+   516 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   517 ;;
+   518 ;; *************** function _main *****************
+   519 ;; Defined at:
+   520 ;;		line 46 in file "SRC/Lab4-Solution.c"
+   521 ;; Parameters:    Size  Location     Type
+   522 ;;		None
+   523 ;; Auto vars:     Size  Location     Type
+   524 ;;		None
+   525 ;; Return value:  Size  Location     Type
+   526 ;;		None               void
+   527 ;; Registers used:
+   528 ;;		wreg, status,2, status,0, pclath, cstack
+   529 ;; Tracked objects:
+   530 ;;		On entry : 17F/0
+   531 ;;		On exit  : 0/0
+   532 ;;		Unchanged: 0/0
+   533 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   534 ;;      Params:         0       0       0       0       0       0       0       0
+   535 ;;      Locals:         0       0       0       0       0       0       0       0
+   536 ;;      Temps:          0       0       0       0       0       0       0       0
+   537 ;;      Totals:         0       0       0       0       0       0       0       0
+   538 ;;Total ram usage:        0 bytes
+   539 ;; Hardware stack levels required when called:    2
+   540 ;; This function calls:
+   541 ;;		_InitSystem
+   542 ;;		_Interrupt_initializer
+   543 ;;		_TIMER1_initializer
+   544 ;; This function is called by:
+   545 ;;		Startup code after reset
+   546 ;; This function uses a non-reentrant model
+   547 ;;
+   548                           
+   549                           
+   550                           ;psect for function _main
+   551  0021                     _main:	
+   552                           
+   553                           ;Lab4-Solution.c: 48: OSCCONbits.IRCF = 0xD;
+   554                           
+   555                           ;incstack = 0
+   556                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   557  0021  0021               	movlb	1	; select bank1
+   558  0022  0819               	movf	25,w	;volatile
+   559  0023  3987               	andlw	-121
+   560  0024  3868               	iorlw	104
+   561  0025  0099               	movwf	25	;volatile
+   562                           
+   563                           ;Lab4-Solution.c: 49: InitSystem();
+   564  0026  3180  203B  3180   	fcall	_InitSystem
+   565                           
+   566                           ;Lab4-Solution.c: 50: TIMER1_initializer();
+   567  0029  3180  2032  3180   	fcall	_TIMER1_initializer
+   568                           
+   569                           ;Lab4-Solution.c: 51: Interrupt_initializer();
+   570  002C  3180  2043  3180   	fcall	_Interrupt_initializer
+   571                           
+   572                           ;Lab4-Solution.c: 52: T1CONbits.TMR1ON = 1;
+   573  002F  0020               	movlb	0	; select bank0
+   574  0030  1418               	bsf	24,0	;volatile
+   575  0031                     l38:	
+   576                           ;Lab4-Solution.c: 53: while(1);
+   577                           
+   578  0031  2831               	goto	l38
+   579  0032                     __end_of_main:	
+   580                           
+   581                           	psect	text1
+   582  0032                     __ptext1:	
+   583 ;; *************** function _TIMER1_initializer *****************
+   584 ;; Defined at:
+   585 ;;		line 77 in file "SRC/Lab4-Solution.c"
+   586 ;; Parameters:    Size  Location     Type
+   587 ;;		None
+   588 ;; Auto vars:     Size  Location     Type
+   589 ;;		None
+   590 ;; Return value:  Size  Location     Type
+   591 ;;		None               void
+   592 ;; Registers used:
+   593 ;;		wreg, status,2, status,0
+   594 ;; Tracked objects:
+   595 ;;		On entry : 0/0
+   596 ;;		On exit  : 0/0
+   597 ;;		Unchanged: 0/0
+   598 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   599 ;;      Params:         0       0       0       0       0       0       0       0
+   600 ;;      Locals:         0       0       0       0       0       0       0       0
+   601 ;;      Temps:          0       0       0       0       0       0       0       0
+   602 ;;      Totals:         0       0       0       0       0       0       0       0
+   603 ;;Total ram usage:        0 bytes
+   604 ;; Hardware stack levels used:    1
+   605 ;; Hardware stack levels required when called:    1
+   606 ;; This function calls:
+   607 ;;		Nothing
+   608 ;; This function is called by:
+   609 ;;		_main
+   610 ;; This function uses a non-reentrant model
+   611 ;;
+   612                           
+   613                           
+   614                           ;psect for function _TIMER1_initializer
+   615  0032                     _TIMER1_initializer:	
+   616                           
+   617                           ;Lab4-Solution.c: 79: T1CONbits.TMR1ON = 0;
+   618                           
+   619                           ;incstack = 0
+   620                           ; Regs used in _TIMER1_initializer: [wreg+status,2+status,0]
+   621  0032  0020               	movlb	0	; select bank0
+   622  0033  1018               	bcf	24,0	;volatile
+   623                           
+   624                           ;Lab4-Solution.c: 80: TMR1H = 0x00;
+   625  0034  0197               	clrf	23	;volatile
+   626                           
+   627                           ;Lab4-Solution.c: 81: TMR1L = 0x00;
+   628  0035  0196               	clrf	22	;volatile
+   629                           
+   630                           ;Lab4-Solution.c: 82: T1CONbits.TMR1CS = 0;
+   631  0036  303F               	movlw	-193
+   632  0037  0598               	andwf	24,f	;volatile
+   633                           
+   634                           ;Lab4-Solution.c: 83: T1CKPS0 = 1;
+   635  0038  1618               	bsf	24,4	;volatile
+   636                           
+   637                           ;Lab4-Solution.c: 84: T1CKPS1 = 1;
+   638  0039  1698               	bsf	24,5	;volatile
+   639  003A  0008               	return
+   640  003B                     __end_of_TIMER1_initializer:	
+   641                           
+   642                           	psect	text2
+   643  0043                     __ptext2:	
+   644 ;; *************** function _Interrupt_initializer *****************
+   645 ;; Defined at:
+   646 ;;		line 94 in file "SRC/Lab4-Solution.c"
+   647 ;; Parameters:    Size  Location     Type
+   648 ;;		None
+   649 ;; Auto vars:     Size  Location     Type
+   650 ;;		None
+   651 ;; Return value:  Size  Location     Type
+   652 ;;		None               void
+   653 ;; Registers used:
+   654 ;;		None
+   655 ;; Tracked objects:
+   656 ;;		On entry : 0/0
+   657 ;;		On exit  : 0/0
+   658 ;;		Unchanged: 0/0
+   659 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   660 ;;      Params:         0       0       0       0       0       0       0       0
+   661 ;;      Locals:         0       0       0       0       0       0       0       0
+   662 ;;      Temps:          0       0       0       0       0       0       0       0
+   663 ;;      Totals:         0       0       0       0       0       0       0       0
+   664 ;;Total ram usage:        0 bytes
+   665 ;; Hardware stack levels used:    1
+   666 ;; Hardware stack levels required when called:    1
+   667 ;; This function calls:
+   668 ;;		Nothing
+   669 ;; This function is called by:
+   670 ;;		_main
+   671 ;; This function uses a non-reentrant model
+   672 ;;
+   673                           
+   674                           
+   675                           ;psect for function _Interrupt_initializer
+   676  0043                     _Interrupt_initializer:	
+   677                           
+   678                           ;Lab4-Solution.c: 96: PIR1bits.TMR1IF = 0;
+   679                           
+   680                           ;incstack = 0
+   681                           ; Regs used in _Interrupt_initializer: []
+   682  0043  0020               	movlb	0	; select bank0
+   683  0044  1011               	bcf	17,0	;volatile
+   684                           
+   685                           ;Lab4-Solution.c: 97: PIE1bits.TMR1IE = 1;
+   686  0045  0021               	movlb	1	; select bank1
+   687  0046  1411               	bsf	17,0	;volatile
+   688                           
+   689                           ;Lab4-Solution.c: 98: INTCONbits.PEIE = 1;
+   690  0047  170B               	bsf	11,6	;volatile
+   691                           
+   692                           ;Lab4-Solution.c: 99: INTCONbits.GIE = 1;
+   693  0048  178B               	bsf	11,7	;volatile
+   694  0049  0008               	return
+   695  004A                     __end_of_Interrupt_initializer:	
+   696                           
+   697                           	psect	text3
+   698  003B                     __ptext3:	
+   699 ;; *************** function _InitSystem *****************
+   700 ;; Defined at:
+   701 ;;		line 63 in file "SRC/Lab4-Solution.c"
+   702 ;; Parameters:    Size  Location     Type
+   703 ;;		None
+   704 ;; Auto vars:     Size  Location     Type
+   705 ;;		None
+   706 ;; Return value:  Size  Location     Type
+   707 ;;		None               void
+   708 ;; Registers used:
+   709 ;;		wreg, status,2
+   710 ;; Tracked objects:
+   711 ;;		On entry : 0/0
+   712 ;;		On exit  : 0/0
+   713 ;;		Unchanged: 0/0
+   714 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   715 ;;      Params:         0       0       0       0       0       0       0       0
+   716 ;;      Locals:         0       0       0       0       0       0       0       0
+   717 ;;      Temps:          0       0       0       0       0       0       0       0
+   718 ;;      Totals:         0       0       0       0       0       0       0       0
+   719 ;;Total ram usage:        0 bytes
+   720 ;; Hardware stack levels used:    1
+   721 ;; Hardware stack levels required when called:    1
+   722 ;; This function calls:
+   723 ;;		Nothing
+   724 ;; This function is called by:
+   725 ;;		_main
+   726 ;; This function uses a non-reentrant model
+   727 ;;
+   728                           
+   729                           
+   730                           ;psect for function _InitSystem
+   731  003B                     _InitSystem:	
+   732                           
+   733                           ;Lab4-Solution.c: 65: PORTB = 0X00;
+   734                           
+   735                           ;incstack = 0
+   736                           ; Regs used in _InitSystem: [wreg+status,2]
+   737  003B  0020               	movlb	0	; select bank0
+   738  003C  018D               	clrf	13	;volatile
+   739                           
+   740                           ;Lab4-Solution.c: 66: TRISB = 0XF0;
+   741  003D  30F0               	movlw	240
+   742  003E  0021               	movlb	1	; select bank1
+   743  003F  008D               	movwf	13	;volatile
+   744                           
+   745                           ;Lab4-Solution.c: 67: ANSELD = 0;
+   746  0040  0023               	movlb	3	; select bank3
+   747  0041  018F               	clrf	15	;volatile
+   748  0042  0008               	return
+   749  0043                     __end_of_InitSystem:	
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      1       1
+    BANK0            80      0       0
+    BANK1            80      0       0
+    BANK2            80      0       0
+    BANK3            80      0       0
+    BANK4            80      0       0
+    BANK5            80      0       0
+    BANK6            16      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _INTERRUPT_Interrupthandler in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _INTERRUPT_Interrupthandler in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _INTERRUPT_Interrupthandler in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _INTERRUPT_Interrupthandler in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _INTERRUPT_Interrupthandler in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _INTERRUPT_Interrupthandler in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _INTERRUPT_Interrupthandler in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _INTERRUPT_Interrupthandler in BANK6
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                         _InitSystem
+              _Interrupt_initializer
+                 _TIMER1_initializer
+ ---------------------------------------------------------------------------------
+ (1) _TIMER1_initializer                                   0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _Interrupt_initializer                                0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _InitSystem                                           0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _INTERRUPT_Interrupthandler                           1     1      0       0
+                                              0 COMMON     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _InitSystem
+   _Interrupt_initializer
+   _TIMER1_initializer
+
+ _INTERRUPT_Interrupthandler (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             1F0      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITCOMMON            E      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               E      1       1       2        7.1%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR2              0      0       0       3        0.0%
+SFR2                 0      0       0       3        0.0%
+STACK                0      0       0       3        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0       0       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR4              0      0       0       5        0.0%
+SFR4                 0      0       0       5        0.0%
+BANK0               50      0       0       6        0.0%
+BITSFR5              0      0       0       6        0.0%
+SFR5                 0      0       0       6        0.0%
+BITBANK1            50      0       0       7        0.0%
+BITSFR6              0      0       0       7        0.0%
+SFR6                 0      0       0       7        0.0%
+BANK1               50      0       0       8        0.0%
+BITSFR7              0      0       0       8        0.0%
+SFR7                 0      0       0       8        0.0%
+BITBANK2            50      0       0       9        0.0%
+BITSFR8              0      0       0       9        0.0%
+SFR8                 0      0       0       9        0.0%
+BANK2               50      0       0      10        0.0%
+BITSFR9              0      0       0      10        0.0%
+SFR9                 0      0       0      10        0.0%
+BITBANK3            50      0       0      11        0.0%
+BITSFR10             0      0       0      11        0.0%
+SFR10                0      0       0      11        0.0%
+BANK3               50      0       0      12        0.0%
+BITSFR11             0      0       0      12        0.0%
+SFR11                0      0       0      12        0.0%
+BITBANK4            50      0       0      13        0.0%
+BITSFR12             0      0       0      13        0.0%
+SFR12                0      0       0      13        0.0%
+BANK4               50      0       0      14        0.0%
+BITSFR13             0      0       0      14        0.0%
+SFR13                0      0       0      14        0.0%
+BITBANK5            50      0       0      15        0.0%
+BITSFR14             0      0       0      15        0.0%
+SFR14                0      0       0      15        0.0%
+BANK5               50      0       0      16        0.0%
+BITSFR15             0      0       0      16        0.0%
+SFR15                0      0       0      16        0.0%
+BITBANK6            10      0       0      17        0.0%
+BITSFR16             0      0       0      17        0.0%
+SFR16                0      0       0      17        0.0%
+BANK6               10      0       0      18        0.0%
+BITSFR17             0      0       0      18        0.0%
+SFR17                0      0       0      18        0.0%
+BITSFR18             0      0       0      19        0.0%
+SFR18                0      0       0      19        0.0%
+DATA                 0      0       0      19        0.0%
+BITSFR19             0      0       0      20        0.0%
+SFR19                0      0       0      20        0.0%
+BITSFR20             0      0       0      21        0.0%
+SFR20                0      0       0      21        0.0%
+BITSFR21             0      0       0      22        0.0%
+SFR21                0      0       0      22        0.0%
+BITSFR22             0      0       0      23        0.0%
+SFR22                0      0       0      23        0.0%
+BITSFR23             0      0       0      24        0.0%
+SFR23                0      0       0      24        0.0%
+BITSFR24             0      0       0      25        0.0%
+SFR24                0      0       0      25        0.0%
+BITSFR25             0      0       0      26        0.0%
+SFR25                0      0       0      26        0.0%
+BITSFR26             0      0       0      27        0.0%
+SFR26                0      0       0      27        0.0%
+BITSFR27             0      0       0      28        0.0%
+SFR27                0      0       0      28        0.0%
+BITSFR28             0      0       0      29        0.0%
+SFR28                0      0       0      29        0.0%
+BITSFR29             0      0       0      30        0.0%
+SFR29                0      0       0      30        0.0%
+BITSFR30             0      0       0      31        0.0%
+SFR30                0      0       0      31        0.0%
+BITSFR31             0      0       0      32        0.0%
+SFR31                0      0       0      32        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.32 build 58300 
+Symbol Table                                                                                   Wed Jul 23 16:33:20 2014
+
+                        __CFG_CP$OFF 0000                                   l38 0031  
+                       __CFG_CPD$OFF 0000                         __CFG_BORV$LO 0000  
+                       __CFG_IESO$ON 0000                         __CFG_LVP$OFF 0000  
+                               i1l35 0016                                 u1_20 0014  
+                       __CFG_WRT$OFF 0000                        __CFG_FCMEN$ON 0000  
+                               _main 0021                                 btemp 007E  
+                               ltemp 007E                                 start 001B  
+                               ttemp 007E                                 wtemp 007E  
+                      __CFG_MCLRE$ON 0000                        __CFG_PLLEN$ON 0000  
+                              ?_main 0070                        __CFG_WDTE$OFF 0000  
+                              _TMR1H 0017                                _TMR1L 0016  
+                              _PORTB 000D                                _TRISB 008D  
+                     __CFG_BOREN$OFF 0000                                ltemp0 007E  
+                              ltemp1 0082                                ltemp2 0086  
+                              ltemp3 0080                                ttemp0 007E  
+                              ttemp1 0081                                ttemp2 0084  
+                              ttemp3 0087                                ttemp4 007F  
+                              wtemp0 007E                                wtemp1 0080  
+                              wtemp2 0082                                wtemp3 0084  
+                              wtemp4 0086                                wtemp5 0088  
+                              wtemp6 007F           __end_of_TIMER1_initializer 003B  
+                    __initialization 001D                         __end_of_main 0032  
+     __size_of_Interrupt_initializer 0007        __end_of_Interrupt_initializer 004A  
+                         _InitSystem 003B                               ??_main 0071  
+        ?_INTERRUPT_Interrupthandler 0070                               _ANSELD 018F  
+                     __CFG_PWRTE$OFF 0000                       __CFG_STVREN$ON 0000  
+            __end_of__initialization 001D                       __pcstackCOMMON 0070  
+                        ?_InitSystem 0070                      __CFG_VCAPEN$OFF 0000  
+                         __pmaintext 0021                           __pintentry 0004  
+                            _T1CKPS0 00C4                              _T1CKPS1 00C5  
+                __size_of_InitSystem 0008                              __ptext1 0032  
+                            __ptext2 0043                              __ptext3 003B  
+                          _T1CONbits 0018                   _TIMER1_initializer 0032  
+                ?_TIMER1_initializer 0070                 end_of_initialization 001D  
+               ??_TIMER1_initializer 0071                _Interrupt_initializer 0043  
+                   __CFG_FOSC$INTOSC 0000                         ??_InitSystem 0071  
+                start_initialization 001D                   __end_of_InitSystem 0043  
+             ?_Interrupt_initializer 0070                            ___latbits 0002  
+       ??_INTERRUPT_Interrupthandler 0070                             _LATBbits 010D  
+                           _PIE1bits 0091                             _PIR1bits 0011  
+__size_of_INTERRUPT_Interrupthandler 0017          __size_of_TIMER1_initializer 0009  
+                      __size_of_main 0011              ??_Interrupt_initializer 0071  
+                         _INTCONbits 000B                          pic14e$flags 007E  
+ __end_of_INTERRUPT_Interrupthandler 001B           _INTERRUPT_Interrupthandler 0004  
+                           intlevel1 0000                    __CFG_CLKOUTEN$OFF 0000  
+                         _OSCCONbits 0099  
