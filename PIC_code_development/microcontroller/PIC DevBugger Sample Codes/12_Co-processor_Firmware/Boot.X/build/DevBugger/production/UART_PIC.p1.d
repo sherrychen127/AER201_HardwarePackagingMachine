@@ -1,5 +1,0 @@
- build/DevBugger/production/UART_PIC.d  \
- build/DevBugger/production/UART_PIC.p1:  \
- UART_PIC.c  \
-UART_PIC.h  \
-configBits.h 
